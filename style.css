@@ -1,0 +1,43 @@
+.jumbotron {
+    background-image: url("https://images.theconversation.com/files/178580/original/file-20170718-22049-ayt454.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip");
+    background-size: cover;
+    color: white;
+}
+
+form {
+    display: flex;
+}
+
+#search-card {
+    float: left;
+    width: 20em;
+    margin-right: 1em;
+}
+
+#five-day-container {
+    justify-content: space-around;
+    color: white;
+}
+
+.card i {
+    margin-bottom: 1em;
+}
+
+.five-day {
+    width: 15%;
+    padding: 0.5em;
+}
+
+h5 {
+    margin-bottom: 1em;
+}
+
+h3, #main-card {
+    display: none;
+}
+
+#uv-index {
+    padding: 0.2em;
+    color: white;
+    border-radius: 0.2em;
+}
