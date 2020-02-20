@@ -100,7 +100,7 @@ $(document).ready(function () {
                 } else if (response.list[i].weather[0].main == "Haze") {
                     var cloudIcon = $("<i class='fas fa-smog'></i>")
                 }
-                var temp = $("<p>Temp: " + fahrenheit.toFixed(2) + "&deg;F</p>");
+                var temp = $("<p>Temp: " + fahrenheit.toFixed() + "&deg;F</p>");
                 var humidity = $("<p>Humidity: " + response.list[i].main.humidity + "%</p>");
                 newCard.append(date, cloudIcon, temp, humidity);
                 $("#five-day-container").append(newCard);
@@ -123,7 +123,7 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             var fahrenheit = response.main.temp * 9 / 5 - 459.67;
-            var displayHeader = $("<h1>" + response.name + "</h1>");
+            var displayHeader = $("<h1>" + response.name + " (" + today + ")" + "</h1>");
             var temp = $("<p>Temperature: " + fahrenheit.toFixed() + "&deg;F</p>");
             var humidity = $("<p>Humidity: " + response.main.humidity + "%</p>");
             var windSpeed = $("<p>Wind speed: " + response.wind.speed + " MPH</p>");
@@ -178,7 +178,7 @@ $(document).ready(function () {
                 } else if (response.list[i].weather[0].main == "Haze") {
                     var cloudIcon = $("<i class='fas fa-smog'></i>")
                 }
-                var temp = $("<p>Temp: " + fahrenheit.toFixed(2) + "&deg;F</p>");
+                var temp = $("<p>Temp: " + fahrenheit.toFixed() + "&deg;F</p>");
                 var humidity = $("<p>Humidity: " + response.list[i].main.humidity + "%</p>");
                 newCard.append(date, cloudIcon, temp, humidity);
                 $("#five-day-container").append(newCard);
